@@ -1,4 +1,5 @@
 # config
 .env
+my.cnf
 create_table.sql
 load_data.sql
