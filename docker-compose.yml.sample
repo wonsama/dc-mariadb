@@ -27,4 +27,4 @@ services:
 networks:
   default:
     external:
-      name: net_runner
+      name: net_my

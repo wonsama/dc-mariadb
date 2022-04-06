@@ -31,17 +31,30 @@ docker-compose.yml.sample
 
 ## network 생성
 
-> 본 예제는 별도 네트워크
+> 본 예제는 별도 외부(external) 네트워크(net_my) 를 생성 후 기본(default) 네트워크로 지정 후, 2개의 서비스(db, adminer) 컨테이너가 해당 기본 네트워크(default - net_my)를 사용하는 방식을 사용 했다.
 
-> 필요에 따라 별도 network 를 만들어 추후 연결해도 좋을 것 같음
-> external network 를 만드는 경우 container 를 내려도 지워지지 않음에 유의
+- 외부 네트워크를 생성하면 다른 docker-compose 로 생성한 컨테이너와 연결이 용이하기 때문 :)
+
+## 실행
 
 ```sh
-# sample
-docker network create net_app
+# 사전작업 : `.sample` 파일을 참조하여 각각의 파일을 만들어 준다.
+# 내용 생략
+
+# 외부 네트워크 생성
+docker network create net_my
+
+# 도커 컴포즈 실행
+docker compose up -d
+
+# 네트워크 연결 상태 확인
+docker network inspect net_my
+
+# adminer 접속
+http://localhost:8080
 ```
 
-## hierarchy 계층구조
+## file hierarchy 파일 계층구조
 
 ```txt
 - db
@@ -54,6 +67,18 @@ docker network create net_app
     - load_data.sql
 - docker-compose.yml
 - .env
+```
+
+## 기타 - 서비스 삭제
+
+> 컨테이너에 올라간 2개 서비스를(db, adminer) 삭제하고자 하는 경우 아래와 같이 입력한다.
+
+- docker-compose.yml 내 service 의 image 추가 또는 버전 변경 등의 작업이 필요한 경우 사용
+- data 폴더 백업 등에 주의 ( 개인적으로는 `mv db/data db/old;mkdir db/data` 등과 같은 형태로 처리 추천 )
+
+```sh
+docker compose rm db
+docker compose rm adminer
 ```
 
 ## reference 참조링크
