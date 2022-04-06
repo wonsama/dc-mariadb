@@ -42,3 +42,4 @@ docker compose maria db
 - https://docs.docker.com/compose/compose-file/compose-file-v3/
 - https://mariadb.com/kb/en/how-to-quickly-insert-data-into-mariadb/
 - https://docs.docker.com/compose/
+- https://www.daleseo.com/docker-compose-networks/
