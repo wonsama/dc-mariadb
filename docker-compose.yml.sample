@@ -13,7 +13,7 @@ services:
     environment:
       TZ: Asia/Seoul
     networks:
-      - backend
+      - default
     restart: always
 
   adminer:
@@ -22,7 +22,9 @@ services:
     ports:
       - 8080:8080
     networks:
-      - backend
+      - default
 
 networks:
-  backend:
+  default:
+    external:
+      name: net_runner
