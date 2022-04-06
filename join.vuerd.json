@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -107.33333333333336,
-    "scrollLeft": 0,
+    "scrollTop": -1,
+    "scrollLeft": -1,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -18,7 +18,7 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "",
+    "databaseName": "students",
     "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
@@ -48,14 +48,14 @@
         "columns": [
           {
             "name": "uuid",
-            "comment": "",
-            "dataType": "",
+            "comment": "UUID",
+            "dataType": "VARCHAR(40)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -64,21 +64,21 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 80.29888916015625,
               "widthDefault": 60
             },
             "id": "b1bf0f18-9b2b-4de9-aa8a-c399008e8b23"
           },
           {
             "name": "runner",
-            "comment": "",
-            "dataType": "",
+            "comment": "참여자ID",
+            "dataType": "VARCHAR(16)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -87,21 +87,21 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 76.73689270019531,
               "widthDefault": 60
             },
             "id": "4f14a52f-0946-4554-bd5e-c4d5533e7f3e"
           },
           {
             "name": "round",
-            "comment": "",
-            "dataType": "",
+            "comment": "라운드",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -116,15 +116,15 @@
             "id": "eea6437e-b4c6-4b00-a55f-4f957f6531e3"
           },
           {
-            "name": "day",
-            "comment": "",
-            "dataType": "",
+            "name": "days",
+            "comment": "진행일",
+            "dataType": "TINYINT",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -140,14 +140,14 @@
           },
           {
             "name": "today_yn",
-            "comment": "",
-            "dataType": "",
-            "default": "",
+            "comment": "오늘 참여게임 여부",
+            "dataType": "CHAR(1)",
+            "default": "\"Y\"",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -155,7 +155,7 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 98.79794311523438,
               "widthDataType": 60,
               "widthDefault": 60
             },
@@ -163,14 +163,14 @@
           },
           {
             "name": "boost",
-            "comment": "",
-            "dataType": "",
-            "default": "",
+            "comment": "금일 참여 회수",
+            "dataType": "TINYINT",
+            "default": "1",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -178,7 +178,7 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 76.30795288085938,
               "widthDataType": 60,
               "widthDefault": 60
             },
@@ -186,14 +186,14 @@
           },
           {
             "name": "trx_id",
-            "comment": "",
-            "dataType": "",
+            "comment": "트랜젝션ID",
+            "dataType": "VARCHAR(40)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -202,21 +202,21 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 80.29888916015625,
               "widthDefault": 60
             },
             "id": "72a0bef6-5c89-4404-9d13-a77e3fcced0d"
           },
           {
             "name": "block",
-            "comment": "",
-            "dataType": "",
+            "comment": "블록ID",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -232,14 +232,14 @@
           },
           {
             "name": "dice",
-            "comment": "",
-            "dataType": "",
+            "comment": "주사위 수",
+            "dataType": "TINYINT",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -255,14 +255,14 @@
           },
           {
             "name": "currency",
-            "comment": "",
-            "dataType": "",
-            "default": "",
+            "comment": "통화 ( STEEM, SBD )",
+            "dataType": "VARCHAR(10)",
+            "default": "\"STEEM\"",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -270,22 +270,22 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
+              "widthComment": 110.23785400390625,
+              "widthDataType": 77.72488403320312,
               "widthDefault": 60
             },
             "id": "82576ed0-4efc-4cfd-a6f0-894d8e7e7ba0"
           },
           {
             "name": "amount",
-            "comment": "",
+            "comment": "금액 ( 소숫점 3 )",
             "dataType": "DECIMAL(15,3)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -293,63 +293,63 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 88.7724609375,
+              "widthComment": 87.11090087890625,
+              "widthDataType": 82.43087768554688,
               "widthDefault": 60
             },
             "id": "5c8156cb-39b0-4d35-ae1b-76723b39ccde"
           },
           {
             "name": "created_at",
-            "comment": "",
-            "dataType": "VARCHAR",
+            "comment": "트랜젝션 생성일",
+            "dataType": "VARCHAR(20)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 62.20751953125,
-              "widthComment": 60,
-              "widthDataType": 60,
+              "widthName": 60,
+              "widthComment": 84.13395690917969,
+              "widthDataType": 80.01287841796875,
               "widthDefault": 60
             },
             "id": "818fa38c-c18a-4a1e-8b5a-df414d171588"
           },
           {
             "name": "created_kr",
-            "comment": "",
-            "dataType": "VARCHAR",
+            "comment": "트렌젝션 생성일 KR TIME",
+            "dataType": "VARCHAR(20)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 62.1376953125,
-              "widthComment": 60,
-              "widthDataType": 60,
+              "widthName": 60,
+              "widthComment": 120,
+              "widthDataType": 80.01287841796875,
               "widthDefault": 60
             },
             "id": "b313aed8-51f0-4978-8bc6-89d07ea40da2"
           },
           {
             "name": "valid_yn",
-            "comment": "",
-            "dataType": "CHAR",
-            "default": "Y",
+            "comment": "유효여부",
+            "dataType": "CHAR(1)",
+            "default": "\"Y\"",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -370,7 +370,7 @@
           },
           {
             "name": "inserted",
-            "comment": "",
+            "comment": "등록일자",
             "dataType": "TIMESTAMP",
             "default": "NOW()",
             "option": {
@@ -386,7 +386,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 71.93212890625,
+              "widthDataType": 68.96292114257812,
               "widthDefault": 60
             },
             "id": "45eed3e8-2569-42c3-82f8-3084b42b36a0"
@@ -396,9 +396,9 @@
           "active": false,
           "left": 50.0001,
           "top": 0.6665,
-          "zIndex": 111,
+          "zIndex": 225,
           "widthName": 60,
-          "widthComment": 89.140625
+          "widthComment": 76.30795288085938
         },
         "visible": true,
         "id": "1671f67f-e5dd-4937-a389-43673425fb9d"
