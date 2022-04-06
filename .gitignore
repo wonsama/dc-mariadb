@@ -1,2 +1,4 @@
 # config
 .env
+create_table.sql
+load_data.sql
