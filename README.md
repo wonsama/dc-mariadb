@@ -92,3 +92,4 @@ docker-compose rm adminer
 - https://mariadb.com/kb/en/how-to-quickly-insert-data-into-mariadb/
 - https://docs.docker.com/compose/
 - https://www.daleseo.com/docker-compose-networks/
+- [mysql collation utf8_general_ci, utf8_unicode_ci 차이점](https://www.dante2k.com/530)
