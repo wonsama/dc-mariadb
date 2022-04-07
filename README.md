@@ -44,8 +44,11 @@ docker-compose.yml.sample
 # 외부 네트워크 생성
 docker network create net_my
 
+# 외부 네트워크 목록확인
+docker network ls
+
 # 도커 컴포즈 실행
-docker compose up -d
+docker-compose up -d
 
 # 네트워크 연결 상태 확인
 docker network inspect net_my
@@ -77,8 +80,8 @@ http://localhost:8080
 - data 폴더 백업 등에 주의 ( 개인적으로는 `mv db/data db/old;mkdir db/data` 등과 같은 형태로 처리 추천 )
 
 ```sh
-docker compose rm db
-docker compose rm adminer
+docker-compose rm db
+docker-compose rm adminer
 ```
 
 ## reference 참조링크

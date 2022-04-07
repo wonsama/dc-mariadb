@@ -26,5 +26,4 @@ services:
 
 networks:
   default:
-    external:
       name: net_my
